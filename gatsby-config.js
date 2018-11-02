@@ -2,6 +2,30 @@ module.exports = {
   siteMetadata: {
     title: 'Peace Jung\'s Blog',
     author: 'Peace Jung',
+    comment: 'ㅇㅏ령하세여어ㅓ어ㅓ',
+    menu: [
+      {
+        label: 'Development',
+        path: '/',
+        child: [{
+            label: 'Node.js',
+            path: '/',
+          },
+          {
+            label: 'React',
+            path: '/',
+          },
+        ],
+      },
+      {
+        label: 'About',
+        path: '/about',
+      },
+      {
+        label: 'cccc',
+        path: '/ccc',
+      },
+    ],
   },
   plugins: [
     'gatsby-plugin-react-helmet',

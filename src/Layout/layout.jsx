@@ -1,51 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
 
-import Sider from './Sidebar/sidebar';
-import './layout.css';
+import Sidebar from './Sidebar/sidebar';
+import Content from '../components/Content/content';
+import './layout.scss';
 
 const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        >
-          <html lang="ko" />
-        </Helmet>
+  <div
+    style={{
+      position: 'relative',
+      margin: '0 auto',
+      maxWidth: 1280,
+    }}
+  >
+    <Sidebar />
+    <Content children={children} />
 
-        <Sider siteTitle={data.site.siteMetadata.title} />
-
-        <div
-          style={{
-            position: 'relative',
-            paddingLeft: 336,
-          }}
-        >
-          {children}
-        </div>
-      </>
-    )}
-  />
+    <span style={{ clear: 'both', display: 'block' }} />
+  </div>
 );
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default Layout;

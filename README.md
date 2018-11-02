@@ -18,26 +18,23 @@ yarn start
 └── src
      ├── assets
      │   ├── fonts
-     │   │   └── whatcaniuse
-     │   │       ├── css
-     │   │       └── font
-     │   └── scss
-     │       ├── base
-     │       ├── mixins
-     │       └── pages
+     │   │   └── nanum-font
+     │   │       └── font-file
      ├── components
-     │   ├── Disqus
-     │   ├── Links
-     │   ├── Menu
-     │   ├── Post
-     │   ├── Sidebar
+     │   └── ummmmmmmm many things
+     ├── images
      ├── layouts
-     ├── pages
-     │   ├── articles
-     │   │   ├── Date---posts
-     │   └── pages
-     │       ├── Date---about
-     │       └── Date---contact
-     └── templates
+     │   ├── Header
+     │   ├── Sidebar
+     │   ├── layout.css
+     │   └── layout.jsx
+     └── pages
+         ├── development
+         │   ├── nodejs
+         │   ├── react
+         │   └── etc
+         └── pages
+             ├── Date---about
+             └── Date---contact
 ```
 
