@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../Layout/layout';
-// import Content from '../components/Content/content';
 
 const SecondPage = () => (
   <Layout>

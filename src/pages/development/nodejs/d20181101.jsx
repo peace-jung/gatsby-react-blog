@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Layout from '../../../layout/layout';
+import Layout from '../../../Layout/layout';
 
-const Nodejs = () => (
+const SecondPage = () => (
   <Layout>
     <div>
       <p>20181101 작성글입니다.</p>
@@ -11,4 +11,4 @@ const Nodejs = () => (
   </Layout>
 );
 
-export default Nodejs;
+export default SecondPage;

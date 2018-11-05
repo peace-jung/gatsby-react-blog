@@ -6,14 +6,14 @@ module.exports = {
     menu: [
       {
         label: 'Development',
-        path: '/',
+        path: '/development',
         child: [{
             label: 'Node.js',
-            path: '/',
+            path: '/nodejs',
           },
           {
             label: 'React',
-            path: '/',
+            path: '/react',
           },
         ],
       },
