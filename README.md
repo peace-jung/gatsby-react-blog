@@ -1,40 +1,18 @@
-<h1 align="center">
-  Peace Jung's Blog
-</h1>
+# gatsby-starter-strata
 
+**This is a starter for Gatsby.js V2.**
 
-## Start
-```
-yarn build
-yarn develop
-yarn start
-```
+**The older V1 version of this starter can be found on the v1 branch**
 
+Gatsby starter based on the Strata site template, designed by [HTML5 UP](https://html5up.net/strata). Check out https://codebushi.com/gatsby-starters/ for more Gatsby starters and templates.
 
+## Preview
 
-## Folder Structure
+http://gatsby-strata.surge.sh/
 
-```
-└── src
-     ├── assets
-     │   ├── fonts
-     │   │   └── nanum-font
-     │   │       └── font-file
-     ├── components
-     │   └── ummmmmmmm many things
-     ├── images
-     ├── layouts
-     │   ├── Header
-     │   ├── Sidebar
-     │   ├── layout.css
-     │   └── layout.jsx
-     └── pages
-         ├── development
-         │   ├── nodejs
-         │   ├── react
-         │   └── etc
-         └── pages
-             ├── Date---about
-             └── Date---contact
-```
+## Installation
 
+Install this starter (assuming Gatsby is installed) by running from your CLI:
+`gatsby new gatsby-starter-strata https://github.com/ChangoMan/gatsby-starter-strata`
+
+Run `gatsby develop` in the terminal to start.

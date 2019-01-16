@@ -1,43 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Peace Jung\'s Blog',
-    author: 'Peace Jung',
-    comment: 'ㅇㅏ령하세여어ㅓ어ㅓ',
-    menu: [
-      {
-        label: 'Development',
-        path: '/development',
-        child: [{
-            label: 'Node.js',
-            path: '/nodejs',
-          },
-          {
-            label: 'React',
-            path: '/react',
-          },
-        ],
-      },
-      {
-        label: 'About',
-        path: '/about',
-      },
-      {
-        label: 'cccc',
-        path: '/ccc',
-      },
-    ],
+    title: "Gatsby Starter - Strata by HTML5 UP",
+    author: "Hunter Chang",
+    description: "A Gatsby.js Starter based on Strata by HTML5 UP"
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -47,17 +15,10 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/assets/images/website-icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        cssLoaderOptions: {
-          camelCase: false,
-        },
-      },
-    },
+    'gatsby-plugin-sass',
+    'gatsby-plugin-offline'
   ],
 }
