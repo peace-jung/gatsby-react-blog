@@ -1,57 +1,47 @@
-import PropTypes from "prop-types";
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Lightbox from "react-images";
 
 class Gallery extends Component {
-  constructor() {
-    super();
+  state = {
+    lightboxIsOpen: false,
+    currentImage: 0,
+  };
 
-    this.state = {
-      lightboxIsOpen: false,
-      currentImage: 0,
-    };
-
-    this.closeLightbox = this.closeLightbox.bind(this);
-    this.gotoNext = this.gotoNext.bind(this);
-    this.gotoPrevious = this.gotoPrevious.bind(this);
-    this.gotoImage = this.gotoImage.bind(this);
-    this.handleClickImage = this.handleClickImage.bind(this);
-    this.openLightbox = this.openLightbox.bind(this);
-  }
-  openLightbox(index, event) {
+  openLightbox = (index, event) => {
     event.preventDefault();
     this.setState({
       currentImage: index,
       lightboxIsOpen: true,
     });
-  }
-  closeLightbox() {
+  };
+  closeLightbox = () => {
     this.setState({
       currentImage: 0,
       lightboxIsOpen: false,
     });
-  }
-  gotoPrevious() {
+  };
+  gotoPrevious = () => {
     this.setState({
       currentImage: this.state.currentImage - 1,
     });
-  }
-  gotoNext() {
+  };
+  gotoNext = () => {
     this.setState({
       currentImage: this.state.currentImage + 1,
     });
-  }
-  gotoImage(index) {
+  };
+  gotoImage = index => {
     this.setState({
       currentImage: index,
     });
-  }
-  handleClickImage() {
+  };
+  handleClickImage = () => {
     if (this.state.currentImage === this.props.images.length - 1) return;
 
     this.gotoNext();
-  }
-  renderGallery() {
+  };
+  renderGallery = () => {
     const { images } = this.props;
 
     if (!images) return;
@@ -64,7 +54,7 @@ class Gallery extends Component {
             href={obj.src}
             onClick={e => this.openLightbox(i, e)}
           >
-            <img src={obj.thumbnail} />
+            <img src={obj.thumbnail} alt="good pizza" />
           </a>
 
           <h3>{obj.caption}</h3>
@@ -74,7 +64,7 @@ class Gallery extends Component {
     });
 
     return <div className="row">{gallery}</div>;
-  }
+  };
   render() {
     return (
       <div>
